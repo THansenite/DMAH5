@@ -16,6 +16,7 @@ echo "
                     <li><a href='index.php'>Home</a></li>
                     <li><a href='schedule.php'>Schedule</a></li>
                     <li><a href='standings.php'>Standings</a></li>
+                    <li><a href='images/JBCHockeyCharterAndRules1_2.pdf' target='_blank'>League Rules</a></li>
                 </ul>
             </nav>
         </div>
