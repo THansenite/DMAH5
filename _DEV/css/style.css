@@ -782,3 +782,26 @@ ul.style3 .first {
 	{
 		font-weight: bold;
 	}	
+
+/*********************************************************************************/
+/* Goon Table                                                                */
+/*********************************************************************************/
+	#stats table
+	{
+		align-content: center;
+		width: 70%;
+		border: 2px solid;
+		padding-bottom: 4px;
+		padding-top: 4px;
+	}
+
+	#stats td, th
+	{
+		padding: 4px;
+		border: solid 1px;
+	}
+
+	#stats th
+	{
+		font-weight: bold;
+	}	
