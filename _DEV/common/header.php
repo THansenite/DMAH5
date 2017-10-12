@@ -15,6 +15,7 @@ echo "
                     <!-- <li class=active'><a href='index.html'>Homepage</a></li> -->
                     <li><a href='index.php'>Home</a></li>
                     <li><a href='schedule.php'>Schedule</a></li>
+                    <li><a href='standings.php'>Standings</a></li>
                 </ul>
             </nav>
         </div>

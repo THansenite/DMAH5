@@ -749,7 +749,36 @@ ul.style3 .first {
 		border: 2px solid;
 	}
 
+	#schedule td, th
+	{
+		padding: 4px;
+		border: solid 1px;
+	}
+
 	#schedule th
 	{
 		font-weight: bold;
 	}
+
+/*********************************************************************************/
+/* Standings Table                                                                */
+/*********************************************************************************/
+	#standings table
+	{
+		align-content: center;
+		width: 70%;
+		border: 2px solid;
+		padding-bottom: 4px;
+		padding-top: 4px;
+	}
+
+	#standings td, th
+	{
+		padding: 4px;
+		border: solid 1px;
+	}
+
+	#standings th
+	{
+		font-weight: bold;
+	}	
