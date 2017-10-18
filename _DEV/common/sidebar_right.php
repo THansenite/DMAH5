@@ -19,7 +19,7 @@
 				on sched.away = team2.id
 		where team1.season = 9 
             and team2.season = 9
-            and sched.date > CURDATE()
+            and sched.date >= CURDATE()
         order by sched.date, sched.time
         limit 0, 4";
     $result = mysqli_query($connection, $query) or die("Query failed");
