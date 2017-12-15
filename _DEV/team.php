@@ -104,7 +104,6 @@
 	while ($row = mysqli_fetch_assoc($result)) {
 				$first = $row['first'];
 				$last = $row['last'];
-				$team = $row['abbreviation'];
 				$goals = $row['G'];
 				$assists = $row['A'];
 				$points = $row['Pts'];

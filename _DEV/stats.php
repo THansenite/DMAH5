@@ -1010,112 +1010,209 @@
 
 
 				<div class="container" id="single_season">
-					<header>
-						<h2>Single Season Team Records</h2>
-					</header>
-					<div class="row">
+				<header>
+					<h2>Single Season Team Records</h2>
+				</header>
+				<div class="row">
 
-						<div class="6u">
-								<section id="content" >
-									<header><strong>Single Season Goals Scored</strong></header>
-									<div id="standings">
-									<table>
-										<thead>
-											<tr>
-												<th>Team</th>
-												<th>Season</th>
-												<th>Goals</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td align=left>Ichi Bike</td>
-												<td align=center>15-16</td>
-												<td align=center><strong>188</strong></td>
-											</tr>
-											<tr>
-												<td align=left>Red Alert</td>
-												<td align=center>15-16</td>
-												<td align=center><strong>177</strong></td>
-											</tr>
-											<tr>
-												<td align=left>Ichi Bike</td>
-												<td align=center>16-17</td>
-												<td align=center><strong>166</strong></td>
-											</tr>
-											<tr>
-												<td align=left>Alien Hockey</td>
-												<td align=center>15-16</td>
-												<td align=center><strong>163</strong></td>
-											</tr>
-											<tr>
-												<td align=left>Alien Hockey</td>
-												<td align=center>11-12</td>
-												<td align=center><strong>155</strong></td>
-											</tr>
-												
-										</tbody>
-										</table>
-										</div>
+					<div class="6u">
+							<section id="content" >
+								<header><strong>Single Season Goals Scored</strong></header>
+								<div id="standings">
+								<table>
+									<thead>
+										<tr>
+											<th>Team</th>
+											<th>Season</th>
+											<th>Goals</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td align=left>Ichi Bike</td>
+											<td align=center>15-16</td>
+											<td align=center><strong>188</strong></td>
+										</tr>
+										<tr>
+											<td align=left>Red Alert</td>
+											<td align=center>15-16</td>
+											<td align=center><strong>177</strong></td>
+										</tr>
+										<tr>
+											<td align=left>Ichi Bike</td>
+											<td align=center>16-17</td>
+											<td align=center><strong>166</strong></td>
+										</tr>
+										<tr>
+											<td align=left>Alien Hockey</td>
+											<td align=center>15-16</td>
+											<td align=center><strong>163</strong></td>
+										</tr>
+										<tr>
+											<td align=left>Kryptonite</td>
+											<td align=center>11-12</td>
+											<td align=center><strong>158</strong></td>
+										</tr>
+											
+									</tbody>
+									</table>
+									</div>
 
-								<br />
-							</section>
-						</div>
-
-						<div class="6u">
-								<section id="content" >
-									<header><strong>Single Season Wins</strong></header>
-									<div id="standings">
-									<table>
-										<thead>
-											<tr>
-												<th>Team</th>
-												<th>Season</th>
-												<th>Wins</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td align=left>Red Alert</td>
-												<td align=center>15-16</td>
-												<td align=center><strong>26</strong></td>
-											</tr>
-											<tr>
-												<td align=left>Ichi Bike</td>
-												<td align=center>15-16</td>
-												<td align=center><strong>23</strong></td>
-											</tr>
-											<tr>
-												<td align=left>Alien Hockey</td>
-												<td align=center>11-12</td>
-												<td align=center><strong>21</strong></td>
-											</tr>
-											<tr>
-												<td align=left>Ichi Bike</td>
-												<td align=center>16-17</td>
-												<td align=center><strong>21</strong></td>
-											</tr>
-											<tr>
-												<td align=left>Victors</td>
-												<td align=center>12-13</td>
-												<td align=center><strong>20</strong></td>
-											</tr>
-												
-										</tbody>
-										</table>
-										</div>
-
-								<br />
-							</section>
-						</div>
-
-
-
-
+							<br />
+						</section>
 					</div>
 
+					<div class="6u">
+							<section id="content" >
+								<header><strong>Single Season Wins</strong></header>
+								<div id="standings">
+								<table>
+									<thead>
+										<tr>
+											<th>Team</th>
+											<th>Season</th>
+											<th>Wins</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td align=left>Red Alert</td>
+											<td align=center>15-16</td>
+											<td align=center><strong>26</strong></td>
+										</tr>
+										<tr>
+											<td align=left>Kryptonite</td>
+											<td align=center>10-11</td>
+											<td align=center><strong>26</strong></td>
+										</tr>
+										<tr>
+											<td align=left>Ichi Bike</td>
+											<td align=center>15-16</td>
+											<td align=center><strong>23</strong></td>
+										</tr>
+										<tr>
+											<td align=left>Kryptonite</td>
+											<td align=center>09-10</td>
+											<td align=center><strong>22</strong></td>
+										</tr>
+										<tr>
+											<td align=left>Victors</td>
+											<td align=center>10-11</td>
+											<td align=center><strong>22</strong></td>
+										</tr>
+											
+									</tbody>
+									</table>
+									</div>
+
+							<br />
+						</section>
+					</div>
+
+					<div class="6u">
+							<section id="content" >
+								<header><strong>Single Season Fewest Goals Allowed</strong></header>
+								<div id="standings">
+								<table>
+									<thead>
+										<tr>
+											<th>Team</th>
+											<th>Season</th>
+											<th>Goals</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td align=left>Victors</td>
+											<td align=center>12-13</td>
+											<td align=center><strong>56</strong></td>
+										</tr>
+										<tr>
+											<td align=left>Red Alert</td>
+											<td align=center>15-16</td>
+											<td align=center><strong>71</strong></td>
+										</tr>
+										<tr>
+											<td align=left>Kryptonite</td>
+											<td align=center>10-11</td>
+											<td align=center><strong>76</strong></td>
+										</tr>
+										<tr>
+											<td align=left>Victors</td>
+											<td align=center>10-11</td>
+											<td align=center><strong>76</strong></td>
+										</tr>
+										<tr>
+											<td align=left>Alien</td>
+											<td align=center>11-12</td>
+											<td align=center><strong>77</strong></td>
+										</tr>
+											
+									</tbody>
+									</table>
+									</div>
+
+							<br />
+						</section>
+					</div>
+
+					<div class="6u">
+							<section id="content" >
+								<header><strong>Single Season Points</strong></header>
+								<div id="standings">
+								<table>
+									<thead>
+										<tr>
+											<th>Team</th>
+											<th>Season</th>
+											<th>Points</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td align=left>Red Alert</td>
+											<td align=center>15-16</td>
+											<td align=center><strong>52</strong></td>
+										</tr>
+										<tr>
+											<td align=left>Kryptonite</td>
+											<td align=center>10-11</td>
+											<td align=center><strong>52</strong></td>
+										</tr>
+										<tr>
+											<td align=left>Ichi</td>
+											<td align=center>15-16</td>
+											<td align=center><strong>46</strong></td>
+										</tr>
+										<tr>
+											<td align=left>Ichi</td>
+											<td align=center>16-17</td>
+											<td align=center><strong>45</strong></td>
+										</tr>
+										<tr>
+											<td align=left>Victors</td>
+											<td align=center>10-11</td>
+											<td align=center><strong>45</strong></td>
+										</tr>
+											
+									</tbody>
+									</table>
+									</div>
+
+							<br />
+						</section>
+					</div>
+
+
+
+
 				</div>
+
 			</div>
+
+
+
+		</div>
 
 
 			<!-- Footer -->
