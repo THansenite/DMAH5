@@ -6,7 +6,17 @@
 -->
 <html>
 	<head>
-		<title>DMAHockey - Standings</title>
+		<!-- Global Site Tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-5932229-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'UA-5932229-1');
+		</script>
+
+		<title>DMAHockey - Schedule</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -57,7 +67,7 @@
 
 <?php
 	include ("common/db_setup.php");
-	$query = "select t.name, 
+	$query = "SELECT t.id, t.name, 
 				(select count(*) from game 
 					join schedule on game.id = schedule.id 
 					where schedule.home=t.id or schedule.away=t.id) as 'GP', 
@@ -109,10 +119,11 @@
 					where t.id = s.away) as 'GA'
 				from team as t 
 				where season = 9
-				order by 7 desc, 3 desc, 4 desc, 8 desc, 1";
+				order by 8 desc, 4 desc, 5 desc, 9 desc, 2";
 				
 	$result = mysqli_query($connection, $query) or die("Query failed");
 	while ($row = mysqli_fetch_assoc($result)) {
+		$id = $row['id'];
 		$team = $row['name'];
 		$games = $row['GP'];
 		$wins = $row['W'];
@@ -123,8 +134,11 @@
 		$gf = $row['GF'];
 		$ga = $row['GA'];
 		
-		echo "<tr><td align=left><strong>";
+		echo "<tr><td align=left><strong><a href='team.php?id=";
+		echo htmlentities($id);
+		echo "'>";
 		echo htmlentities($team);
+		echo "</a>";
 		echo "</strong></td><td align=center>";
 		echo htmlentities($games);
 		echo "</td><td align=center>";

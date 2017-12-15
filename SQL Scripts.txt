@@ -1,19 +1,4 @@
-//Gets all players on a team 
-
-select pr.first, pr.last
-from team tm
-join player pl
-	on tm.id = pl.team
-join person pr
-	on pl.person = pr.id
-where tm.id = 1
-
-
-//Insert person and player
-INSERT INTO `dmahockey`.`person` (`first`, `last`) VALUES ('John', 'Doe');
-INSERT INTO `dmahockey`.`player` (`person`, `team`) VALUES ('2', '1'); 	//person, team
-
-//Get Roster
+## Get Roster
 select t.name, pl.id, pr.first, pr.last
 from team t
 join player pl
@@ -22,6 +7,13 @@ join person pr
 	on pl.person = pr.id
 where t.id = 1
 order by pr.last, pr.first
+
+
+//Insert person and player
+INSERT INTO `dmahockey`.`person` (`first`, `last`) VALUES ('John', 'Doe');
+INSERT INTO `dmahockey`.`player` (`person`, `team`) VALUES ('2', '1'); 	//person, team
+
+
 
 //Get Penalties
 SELECT * 
@@ -103,3 +95,135 @@ WHERE tm.season = 9
 GROUP BY pr.first, pr.last
 HAVING games >= 3
 ORDER BY gaa, games DESC, pr.last
+
+// ***** Hat Tricks ***** //
+select e.game, e.player, count(e.player)
+from event e
+where e.type = 1
+group by e.game, e.player
+having count(e.player) = 3
+
+### ***** Historic Goalie Shutouts ***** ###
+SELECT person, sum(shutouts) as 'SO'
+from historic_goalie
+group by person
+order by sum(shutouts) desc
+
+### ***** Historic Goalie GAA ***** ###
+SELECT person, 
+	sum(games_played) as 'GP',
+	sum(goals_against) as 'GA',
+	(sum(goals_against)/sum(games_played)) as 'GAA'
+from historic_goalie
+group by person
+HAVING sum(games_played) > 9
+ORDER BY `GAA`  ASC
+
+### ***** Historic Most Goals ***** ###
+select hp.person, p.first, p.last, sum(hp.goals)
+from historic_player hp
+join person p
+on hp.person = p.id
+group by hp.person, p.first, p.last
+order by sum(hp.goals) desc
+
+### ***** Historic Most Points ***** ###
+select hp.person, p.first, p.last, sum(hp.goals) + sum(hp.assists) as 'Points'
+from historic_player hp
+join person p
+on hp.person = p.id
+group by hp.person, p.first, p.last
+order by sum(hp.goals) + sum(hp.assists) desc
+
+### ***** Historic Most Penalty Minutes ***** ###
+select hp.person, p.first, p.last, sum(hp.penalty_minutes) as 'PM'
+from historic_player hp
+join person p
+on hp.person = p.id
+group by hp.person, p.first, p.last
+order by sum(hp.penalty_minutes) desc
+
+## ***** Get current goals/assists/penalty_minutes ***** ###
+
+
+
+
+## ----- Historic + Current Most Goals ----- ##
+SELECT p.first, p.last, (sum(hp.goals) + curr.g) as 'goals'
+from historic_player hp
+join person p
+	on hp.person = p.id
+left join (SELECT pe.id,
+		count(case when e.type = 1 then 1 end) G
+		FROM player pl
+		JOIN person pe
+		ON pl.person = pe.id
+		LEFT JOIN event e
+		on pl.id = e.player
+		GROUP BY pe.id) as curr
+on hp.person = curr.id
+group by hp.person, p.first, p.last
+order by (sum(hp.goals) + curr.g) desc
+limit 10
+
+SELECT per.first, per.last, sum(curr.goals) as goals
+from  ((SELECT hp.person, hp.goals
+from historic_player hp)
+	UNION
+(SELECT pe.id,
+count(case when e.type = 1 then 1 end) G
+FROM player pl
+JOIN person pe
+ON pl.person = pe.id
+LEFT JOIN event e
+on pl.id = e.player
+GROUP BY pe.id)) as curr
+join person per
+on curr.person = per.id
+group by curr.person
+
+## ----- Historic + Current Most Penalty Minutes ----- ## ///UNDER CONSTRUCTION
+SELECT p.first, p.last, (sum(hp.penalty_minutes) + curr.pm) as 'pm'
+from historic_player hp
+join person p
+	on hp.person = p.id
+left join (SELECT pr.id, 
+	sum(case when p.duration = null then 0 else p.duration end) as pm
+		FROM team t
+		JOIN player pl
+			ON t.id = pl.team
+		JOIN person pr
+			ON pl.person = pr.id
+		JOIN event e
+			ON pl.id = e.player
+		JOIN penalty p
+			ON e.id = p.id
+		JOIN (SELECT t.id, count(t.id) as 'games'
+				FROM team t
+				JOIN schedule s
+					ON t.id = s.home or t.id = s.away
+				JOIN game g
+					ON s.id = g.id
+				GROUP BY t.id) gp
+		ON t.id = gp.id
+		WHERE t.season = 9
+			AND e.type = 3
+		GROUP BY pr.id
+		) as curr
+on hp.person = curr.id
+group by hp.person, p.first, p.last
+order by (sum(hp.penalty_minutes) + curr.pm) desc, p.last, p.first
+limit 10
+
+
+## ----- Historic + Current Most Points ----- ##
+SELECT p.first, p.last, 
+	sum(hp.goals) as 'Goals', 
+	sum(hp.assists) as 'Assists', 
+	sum(hp.goals) + sum(hp.assists) as 'Points'
+from historic_player hp
+join person p
+on hp.person = p.id
+group by p.first, p.last
+order by sum(hp.goals) + sum(hp.assists) desc
+limit 10
