@@ -21,6 +21,15 @@ group by tot.person
 order by goals desc, per.last, per.first
 limit 10
 
+## ----- People playing in all seasons ----- ##
+
+SELECT hp.person, per.first, per.last, COUNT( hp.season ) 
+FROM historic_player hp
+join person per
+on hp.person = per.id
+GROUP BY hp.person
+having COUNT( hp.season )  = 8
+
 ## ----- Career Penalty Minutes by Player ----- ##
 
 SELECT tot.person, per.first, per.last, sum(tot.penalty_minutes) as penalty_minutes
