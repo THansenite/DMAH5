@@ -9,6 +9,15 @@ where t.id = 1
 order by pr.last, pr.first
 
 
+## Get Goalies
+select distinct(g.player), pr.first, pr.last
+from goalie g
+join player pl
+	on g.player = pl.id
+join person pr
+	on pl.person = pr.id
+order by pr.last
+
 //Insert person and player
 INSERT INTO `dmahockey`.`person` (`first`, `last`) VALUES ('John', 'Doe');
 INSERT INTO `dmahockey`.`player` (`person`, `team`) VALUES ('2', '1'); 	//person, team
@@ -167,52 +176,78 @@ order by (sum(hp.goals) + curr.g) desc
 limit 10
 
 SELECT per.first, per.last, sum(curr.goals) as goals
-from  ((SELECT hp.person, hp.goals
+from  
+
+((SELECT hp.person, hp.goals
 from historic_player hp)
+
 	UNION
-(SELECT pe.id,
-count(case when e.type = 1 then 1 end) G
+(SELECT pe.id as person,
+count(case when e.type = 1 then 1 end) goals
 FROM player pl
 JOIN person pe
 ON pl.person = pe.id
 LEFT JOIN event e
 on pl.id = e.player
 GROUP BY pe.id)) as curr
+
 join person per
 on curr.person = per.id
 group by curr.person
 
-## ----- Historic + Current Most Penalty Minutes ----- ## ///UNDER CONSTRUCTION
-SELECT p.first, p.last, (sum(hp.penalty_minutes) + curr.pm) as 'pm'
+
+select person, per.first, per.last, sum(tot.goals) as goals
+from 
+((SELECT hp.person, sum(hp.goals) as goals
 from historic_player hp
-join person p
-	on hp.person = p.id
-left join (SELECT pr.id, 
-	sum(case when p.duration = null then 0 else p.duration end) as pm
+group by hp.person)
+
+	UNION
+(SELECT pe.id as person,
+count(case when e.type = 1 then 1 end) goals
+FROM player pl
+JOIN person pe
+ON pl.person = pe.id
+LEFT JOIN event e
+on pl.id = e.player
+GROUP BY pe.id)) tot
+join person per
+on tot.person = per.id
+group by person, per.first, per.last
+order by goals DESC, per.last, per.first
+
+
+## ----- Historic + Current Most Penalty Minutes ----- ##
+SELECT per.first, per.last, sum(al.penalty_minutes) as pm
+from  ((select person, penalty_minutes
+from historic_player)
+UNION
+(SELECT pr.id, 
+sum(case when p.duration = null then 0 else p.duration end) as pm
+FROM team t
+JOIN player pl
+	ON t.id = pl.team
+JOIN person pr
+	ON pl.person = pr.id
+JOIN event e
+	ON pl.id = e.player
+JOIN penalty p
+	ON e.id = p.id
+JOIN (SELECT t.id, count(t.id) as 'games'
 		FROM team t
-		JOIN player pl
-			ON t.id = pl.team
-		JOIN person pr
-			ON pl.person = pr.id
-		JOIN event e
-			ON pl.id = e.player
-		JOIN penalty p
-			ON e.id = p.id
-		JOIN (SELECT t.id, count(t.id) as 'games'
-				FROM team t
-				JOIN schedule s
-					ON t.id = s.home or t.id = s.away
-				JOIN game g
-					ON s.id = g.id
-				GROUP BY t.id) gp
-		ON t.id = gp.id
-		WHERE t.season = 9
-			AND e.type = 3
-		GROUP BY pr.id
-		) as curr
-on hp.person = curr.id
-group by hp.person, p.first, p.last
-order by (sum(hp.penalty_minutes) + curr.pm) desc, p.last, p.first
+		JOIN schedule s
+			ON t.id = s.home or t.id = s.away
+		JOIN game g
+			ON s.id = g.id
+		GROUP BY t.id) gp
+ON t.id = gp.id
+WHERE t.season = 9
+	AND e.type = 3
+GROUP BY pr.id)) as al
+join person per
+on al.person = per.id
+group by al.person
+order by pm desc
 limit 10
 
 
@@ -227,3 +262,35 @@ on hp.person = p.id
 group by p.first, p.last
 order by sum(hp.goals) + sum(hp.assists) desc
 limit 10
+
+
+SELECT per.first, per.last, sum(al.penalty_minutes) as pm
+from  ((select person, penalty_minutes
+from historic_player)
+UNION
+(SELECT pr.id, 
+sum(case when p.duration = null then 0 else p.duration end) as pm
+FROM team t
+JOIN player pl
+	ON t.id = pl.team
+JOIN person pr
+	ON pl.person = pr.id
+JOIN event e
+	ON pl.id = e.player
+JOIN penalty p
+	ON e.id = p.id
+JOIN (SELECT t.id, count(t.id) as 'games'
+		FROM team t
+		JOIN schedule s
+			ON t.id = s.home or t.id = s.away
+		JOIN game g
+			ON s.id = g.id
+		GROUP BY t.id) gp
+ON t.id = gp.id
+WHERE t.season = 9
+	AND e.type = 3
+GROUP BY pr.id)) as al
+join person per
+on al.person = per.id
+group by al.person
+order by pm desc
