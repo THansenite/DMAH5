@@ -194,6 +194,10 @@
 			{
 				echo " (T)";
 			}
+			if ($outcome == 6) 
+			{
+				echo " (NS)";
+			}
 		}
 		echo "</td></tr>";
 
