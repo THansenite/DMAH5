@@ -1022,7 +1022,7 @@ INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (57, 29, 2);
 INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (57, 20, 3);
 INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (57, 24, 3);
 INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (57, 81, 3);
-INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (57, 84, 3);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (57, 84, 3); #
 
 INSERT INTO `dmahockey`.`penalty` (`id`, `type`, `duration`, `goal_scored`, `bench_minor`) VALUES (701, 4, 10, NULL, "0");
 INSERT INTO `dmahockey`.`penalty` (`id`, `type`, `duration`, `goal_scored`, `bench_minor`) VALUES (702, 4, 10, NULL, "0");
@@ -1037,6 +1037,79 @@ INSERT INTO `dmahockey`.`goalie` (`game`, `player`, `team`, `goals_against`, `du
 INSERT INTO `dmahockey`.`goalie` (`game`, `player`, `team`, `goals_against`, `duration`, `order`) VALUES (60,127, 8, 6, 57, NULL);
 INSERT INTO `dmahockey`.`goalie` (`game`, `player`, `team`, `goals_against`, `duration`, `order`) VALUES (60, 53, 4, 1, 57, NULL);
 
+#Week 16
+#Goals
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (61, 87, 1);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (61, 87, 1);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (61, 88, 1);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (61, 89, 1);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (61, 60, 1);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (61, 61, 1);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (61, 64, 1);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (61, 67, 1);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (62, 12, 1);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (62, 14, 1);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (62,  3, 1);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (62, 80, 1);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (62, 80, 1);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (63,121, 1);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (63,128, 1);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (63,122, 1);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (63, 39, 1);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (63, 41, 1);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (63, 51, 1);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (63, 51, 1);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (63, 52, 1);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (64,108, 1);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (64,111, 1);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (64,111, 1);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (64, 19, 1);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (64, 19, 1);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (64, 25, 1);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (64, 26, 1);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (64, 27, 1);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (64, 27, 1);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (64, 28, 1);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (64, 28, 1);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (64, 32, 1);
+
+#Assists
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (61,61, 2);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (61,67, 2);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (62, 5, 2);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (62,10, 2);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (64,19, 2);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (64,19, 2);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (64,19, 2);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (64,19, 2);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (64,19, 2);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (64,23, 2);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (64,31, 2);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (64,31, 2);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (64,31, 2);
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (64,32, 2);
+
+#Penalties
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (57, 99, 3); #Richeson	Misconduct	5
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (57, 99, 3); #Richeson	Misconduct	10
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (57, 67, 3); #Howe	High sticking	3
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (57, 75, 3); #Koenig	Cross Checking	3
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (57, 34, 3); #Green	Hooking	3
+
+INSERT INTO `dmahockey`.`penalty` (`id`, `type`, `duration`, `goal_scored`, `bench_minor`) VALUES (752, 4, 5, NULL, "0");
+INSERT INTO `dmahockey`.`penalty` (`id`, `type`, `duration`, `goal_scored`, `bench_minor`) VALUES (753, 4,10, NULL, "0");
+INSERT INTO `dmahockey`.`penalty` (`id`, `type`, `duration`, `goal_scored`, `bench_minor`) VALUES (754, 7, 3, NULL, "0");
+INSERT INTO `dmahockey`.`penalty` (`id`, `type`, `duration`, `goal_scored`, `bench_minor`) VALUES (755,12, 3, NULL, "0");
+INSERT INTO `dmahockey`.`penalty` (`id`, `type`, `duration`, `goal_scored`, `bench_minor`) VALUES (756, 2, 3, NULL, "0");
+
+#Goalies
+# INSERT INTO `dmahockey`.`goalie` (`game`, `player`, `team`, `goals_against`, `duration`, `order`) VALUES (61, 53, 4, 4, 57, NULL);
+# INSERT INTO `dmahockey`.`goalie` (`game`, `player`, `team`, `goals_against`, `duration`, `order`) VALUES (61, 85, 6, 4, 57, NULL);
+# INSERT INTO `dmahockey`.`goalie` (`game`, `player`, `team`, `goals_against`, `duration`, `order`) VALUES (62,  1, 1, 2, 57, NULL);
+# INSERT INTO `dmahockey`.`goalie` (`game`, `player`, `team`, `goals_against`, `duration`, `order`) VALUES (62, 79, 5, 3, 57, NULL);
+# INSERT INTO `dmahockey`.`goalie` (`game`, `player`, `team`, `goals_against`, `duration`, `order`) VALUES (63,127, 8, 5, 57, NULL);
+# INSERT INTO `dmahockey`.`goalie` (`game`, `player`, `team`, `goals_against`, `duration`, `order`) VALUES (63,139, 3, 3, 57, NULL);
+# INSERT INTO `dmahockey`.`goalie` (`game`, `player`, `team`, `goals_against`, `duration`, `order`) VALUES (64, 18, 2, 3, 57, NULL);
 
 ## ******************************************************************************************
 ## ************************************* NotEnteredYet **************************************
@@ -1045,7 +1118,7 @@ INSERT INTO `dmahockey`.`goalie` (`game`, `player`, `team`, `goals_against`, `du
 # INSERT INTO `dmahockey`.`goalie` (`game`, `player`, `team`, `goals_against`, `duration`, `order`) VALUES (14, 85, 6, 0, 57, NULL);
 # INSERT INTO `dmahockey`.`goalie` (`game`, `player`, `team`, `goals_against`, `duration`, `order`) VALUES (16, 53, 4, 0, 57, NULL);
 # INSERT INTO `dmahockey`.`goalie` (`game`, `player`, `team`, `goals_against`, `duration`, `order`) VALUES (16, 79, 5, 0, 57, NULL);
-
+# INSERT INTO `dmahockey`.`goalie` (`game`, `player`, `team`, `goals_against`, `duration`, `order`) VALUES (64,   , 7, 9, 57, NULL);
 
 
 
