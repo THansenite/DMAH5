@@ -59,8 +59,8 @@ Released   : 20140221
 					<th align="middle">L</th>
 					<th align="middle">T</th>
 					<th align="middle">Pts</th>
-					<th align="middle">GA</th>
 					<th align="middle">GF</th>
+					<th align="middle">GA</th>
 				</tr>
 
 				<?php
@@ -253,29 +253,29 @@ Released   : 20140221
 			 <tr>
 				<td align="middle">2/11/18</td>
 				<td align="middle">06:30PM</td>
-				<td align="middle">1st Place</td>
-				<td align="middle">8th Place</td>
+				<td align="middle">Radon Rangers (1)</td>
+				<td align="middle">Ice Beavers (8)</td>
 				<td style="text-align: center;" align="middle"><strong>&nbsp;</strong></td>
 			</tr>
 			<tr>
 				<td align="middle">2/11/18</td>
 				<td align="middle">07:15PM</td>
-				<td align="middle">2nd Place</td>
-				<td align="middle">7th Place</td>
+				<td align="middle">Shams (2)</td>
+				<td align="middle">Downtown Feat (7)</td>
 				<td style="text-align: center;" align="middle"><strong>&nbsp;</strong></td>
 			</tr>
 			<tr>
 				<td align="middle">2/11/18</td>
 				<td align="middle">08:00PM</td>
-				<td align="middle">3rd Place</td>
-				<td align="middle">6th Place</td>
+				<td align="middle">Lumberjacks (3)</td>
+				<td align="middle">Temple of Broom (6)</td>
 				<td style="text-align: center;" align="middle"><strong>&nbsp;</strong></td>
 			</tr>
 			<tr>
 				<td align="middle">2/11/18</td>
 				<td align="middle">08:45PM</td>
-				<td align="middle">4th Place</td>
-				<td align="middle">5th Place</td>
+				<td align="middle">Ice Monkeys (4)</td>
+				<td align="middle">Ball Hawgs (5)</td>
 				<td style="text-align: center;" align="middle"><strong>&nbsp;</strong></td>
 			</tr> 
 			
