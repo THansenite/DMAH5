@@ -253,30 +253,30 @@ Released   : 20140221
 			 <tr>
 				<td align="middle">2/11/18</td>
 				<td align="middle">06:30PM</td>
-				<td align="middle">Radon Rangers (1)</td>
-				<td align="middle">Ice Beavers (8)</td>
-				<td style="text-align: center;" align="middle"><strong>&nbsp;</strong></td>
+				<td align="middle"><strong>Radon Rangers (1)</strong></td>
+				<td align="middle">Downtown Feat (8)</td>
+				<td style="text-align: center;" align="middle"><strong>1 - 0 (SO)</strong></td>
 			</tr>
 			<tr>
 				<td align="middle">2/11/18</td>
 				<td align="middle">07:15PM</td>
-				<td align="middle">Shams (2)</td>
-				<td align="middle">Downtown Feat (7)</td>
-				<td style="text-align: center;" align="middle"><strong>&nbsp;</strong></td>
+				<td align="middle"><strong>Shams (2)</strong></td>
+				<td align="middle">Ice Beavers (7)</td>
+				<td style="text-align: center;" align="middle"><strong>1 - 0 (OT)</strong></td>
 			</tr>
 			<tr>
 				<td align="middle">2/11/18</td>
 				<td align="middle">08:00PM</td>
-				<td align="middle">Lumberjacks (3)</td>
+				<td align="middle"><strong>Lumberjacks (3)</strong></td>
 				<td align="middle">Temple of Broom (6)</td>
-				<td style="text-align: center;" align="middle"><strong>&nbsp;</strong></td>
+				<td style="text-align: center;" align="middle"><strong>1 - 0</strong></td>
 			</tr>
 			<tr>
 				<td align="middle">2/11/18</td>
 				<td align="middle">08:45PM</td>
 				<td align="middle">Ice Monkeys (4)</td>
-				<td align="middle">Ball Hawgs (5)</td>
-				<td style="text-align: center;" align="middle"><strong>&nbsp;</strong></td>
+				<td align="middle"><strong>Ball Hawgs (5)</strong></td>
+				<td style="text-align: center;" align="middle"><strong>0 - 1 (OT)</strong></td>
 			</tr> 
 			
 			<tr>
@@ -285,65 +285,77 @@ Released   : 20140221
 			 <tr>
 				<td align="middle">2/18/18</td>
 				<td align="middle">06:30PM</td>
-				<td align="middle">Winner 1/8</td>
-				<td align="middle">Winner 4/5</td>
-				<td style="text-align: center;" align="middle"><strong>&nbsp;</strong></td>
+				<td align="middle"><strong>Radon Rangers</strong></td>
+				<td align="middle">Ball Hawgs</td>
+				<td style="text-align: center;" align="middle"><strong>1 - 0 (OT)</strong></td>
 			</tr>
 			<tr>
 				<td align="middle">2/18/18</td>
 				<td align="middle">07:15PM</td>
-				<td align="middle">Winner 2/7</td>
-				<td align="middle">Winner 3/6</td>
-				<td style="text-align: center;" align="middle"><strong>&nbsp;</strong></td>
+				<td align="middle"><strong>Shams</strong></td>
+				<td align="middle">Lumberjacks</td>
+				<td style="text-align: center;" align="middle"><strong>1 - 0 (SO)</strong></td>
 			</tr>
 			<tr>
 				<td align="middle">2/18/18</td>
 				<td align="middle">08:00PM</td>
-				<td align="middle">Loser 1/8</td>
-				<td align="middle">Loser 4/5</td>
-				<td style="text-align: center;" align="middle"><strong>&nbsp;</strong></td>
+				<td align="middle">Downtown Feat</td>
+				<td align="middle"><strong>Ice Monkeys</strong></td>
+				<td style="text-align: center;" align="middle"><strong>1 - 3</strong></td>
 			</tr>
 			<tr>
 				<td align="middle">2/18/18</td>
 				<td align="middle">08:45PM</td>
-				<td align="middle">Loser 2/7</td>
-				<td align="middle">Loser 3/6</td>
-				<td style="text-align: center;" align="middle"><strong>&nbsp;</strong></td>
+				<td align="middle"><strong>Ice Beavers</strong></td>
+				<td align="middle">Temple of Broom</td>
+				<td style="text-align: center;" align="middle"><strong>1 - 0</strong></td>
 			</tr> 
 			
 			<tr>
 				<td colspan="5" bgcolor="#e0f1f6"><strong>Championships</strong></td>
 			</tr>
+			<tr>
+				<td colspan="5"><strong><em>3rd Place Game</em></strong></td>
+			</tr>
 			 <tr>
 				<td align="middle">2/25/18</td>
 				<td align="middle">06:30PM</td> 
-				<td align="middle" colspan=2>3rd/4th Place Game</td>
-				<!--<td align="middle">Winner 1/8</td>
-				<td align="middle">Winner 4/5</td> -->
+				<!--<td align="middle" colspan=2>3rd/4th Place Game</td> -->
+				<td align="middle">Lumberjacks</td>
+				<td align="middle">Ball Hawgs</td>
 				<td style="text-align: center;" align="middle"><strong>&nbsp;</strong></td>
+			</tr>
+			<tr>
+				<td colspan="5"><strong><em>Championship Game</em></strong></td>
 			</tr>
 			<tr>
 				<td align="middle">2/25/18</td>
 				<td align="middle">07:15PM</td>
-				<td align="middle" colspan=2>1st/2nd Place Game</td>
-				<!-- <td align="middle">Winner 2/7</td>
-				<td align="middle">Winner 3/6</td> -->
+				<!--<td align="middle" colspan=2>1st/2nd Place Game</td>-->
+				<td align="middle">Radon Rangers</td>
+				<td align="middle">Shams</td>
 				<td style="text-align: center;" align="middle"><strong>&nbsp;</strong></td>
+			</tr>
+			<tr>
+				<td colspan="5"><strong><em>5th Place Game</strong></em></td>
 			</tr>
 			<tr>
 				<td align="middle">2/25/18</td>
 				<td align="middle">08:00PM</td>
-				<td align="middle" colspan=2>5th/6th Place Game</td>
-				<!-- <td align="middle">Loser 1/8</td>
-				<td align="middle">Loser 4/5</td> -->
+				<!-- <td align="middle" colspan=2>5th/6th Place Game</td> -->
+				<td align="middle">Ice Monkeys</td>
+				<td align="middle">Ice Beavers</td>
 				<td style="text-align: center;" align="middle"><strong>&nbsp;</strong></td>
+			</tr>
+			<tr>
+				<td colspan="5"><strong><em>7th Place Game</strong></em></td>
 			</tr>
 			<tr>
 				<td align="middle">2/25/18</td>
 				<td align="middle">08:45PM</td>
-				<td align="middle" colspan=2>7th/8th Place Game</td>
-				<!-- <td align="middle">Loser 2/7</td>
-				<td align="middle">Loser 3/6</td> -->
+				<!-- <td align="middle" colspan=2>7th/8th Place Game</td> -->
+				<td align="middle">Temple of Broom</td>
+				<td align="middle">Downtown Feat</td>
 				<td style="text-align: center;" align="middle"><strong>&nbsp;</strong></td>
 			</tr> 
 

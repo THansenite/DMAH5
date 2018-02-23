@@ -1275,6 +1275,12 @@ INSERT INTO `dmahockey`.`goalie` (`game`, `player`, `team`, `goals_against`, `du
 INSERT INTO `dmahockey`.`goalie` (`game`, `player`, `team`, `goals_against`, `duration`, `order`) VALUES (75, 53, 4, 3, 57, NULL);
 INSERT INTO `dmahockey`.`goalie` (`game`, `player`, `team`, `goals_against`, `duration`, `order`) VALUES (75, 44, 7, 1, 57, NULL);
 
+#Week 20
+#Penalties
+INSERT INTO `dmahockey`.`event` (`game`, `player`, `type`) VALUES (77, 130, 3); #Kinz	Hooking
+
+INSERT INTO `dmahockey`.`penalty` (`id`, `type`, `duration`, `goal_scored`, `bench_minor`) VALUES (874, 2, 3, NULL, "0");
+
 ## ******************************************************************************************
 ## ************************************* NotEnteredYet **************************************
 ## ******************************************************************************************
