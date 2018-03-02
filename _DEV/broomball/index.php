@@ -322,8 +322,8 @@ Released   : 20140221
 				<td align="middle">06:30PM</td> 
 				<!--<td align="middle" colspan=2>3rd/4th Place Game</td> -->
 				<td align="middle">Lumberjacks</td>
-				<td align="middle">Ball Hawgs</td>
-				<td style="text-align: center;" align="middle"><strong>&nbsp;</strong></td>
+				<td align="middle"><strong>Ball Hawgs</strong></td>
+				<td style="text-align: center;" align="middle"><strong>0 - 2</strong></td>
 			</tr>
 			<tr>
 				<td colspan="5"><strong><em>Championship Game</em></strong></td>
@@ -332,9 +332,9 @@ Released   : 20140221
 				<td align="middle">2/25/18</td>
 				<td align="middle">07:15PM</td>
 				<!--<td align="middle" colspan=2>1st/2nd Place Game</td>-->
-				<td align="middle">Radon Rangers</td>
+				<td align="middle"><strong>Radon Rangers</strong></td>
 				<td align="middle">Shams</td>
-				<td style="text-align: center;" align="middle"><strong>&nbsp;</strong></td>
+				<td style="text-align: center;" align="middle"><strong>2-1</strong></td>
 			</tr>
 			<tr>
 				<td colspan="5"><strong><em>5th Place Game</strong></em></td>
@@ -343,9 +343,9 @@ Released   : 20140221
 				<td align="middle">2/25/18</td>
 				<td align="middle">08:00PM</td>
 				<!-- <td align="middle" colspan=2>5th/6th Place Game</td> -->
-				<td align="middle">Ice Monkeys</td>
+				<td align="middle"><strong>Ice Monkeys</strong></td>
 				<td align="middle">Ice Beavers</td>
-				<td style="text-align: center;" align="middle"><strong>&nbsp;</strong></td>
+				<td style="text-align: center;" align="middle"><strong>3-1</strong></td>
 			</tr>
 			<tr>
 				<td colspan="5"><strong><em>7th Place Game</strong></em></td>
@@ -354,9 +354,9 @@ Released   : 20140221
 				<td align="middle">2/25/18</td>
 				<td align="middle">08:45PM</td>
 				<!-- <td align="middle" colspan=2>7th/8th Place Game</td> -->
-				<td align="middle">Temple of Broom</td>
+				<td align="middle"><strong>Temple of Broom</strong></td>
 				<td align="middle">Downtown Feat</td>
-				<td style="text-align: center;" align="middle"><strong>&nbsp;</strong></td>
+				<td style="text-align: center;" align="middle"><strong>1-0</strong></td>
 			</tr> 
 
 			</tbody>
