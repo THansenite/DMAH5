@@ -1,0 +1,55 @@
+select t.name, 
+(select count(*) from game 
+	join schedule on game.id = schedule.id 
+	where schedule.home=t.id or schedule.away=t.id) as 'GP', 
+(select count(*) from game as g 
+	join schedule as s on g.id = s.id 
+	where (t.id = s.home and g.home_score > g.away_score) 
+		or (t.id = s.away and g.home_score < g. away_score) 
+		or (t.id = s.home and g.result = 2) 
+		or (t.id = s.away and g.result = 1)
+		or (t.id = s.home and g.result = 4)
+		or (t.id = s.away and g.result = 3)) as 'W', 
+(select count(*) from game as g 
+	join schedule as s on g.id = s.id 
+	where (t.id = s.home and g.home_score < g. away_score) 
+		or (t.id = s.away and g.home_score > g. away_score)
+		or (t.id = s.home and g.result = 3)
+		or (t.id = s.away and g.result = 4)) as 'L', 
+(select count(*) from game as g 
+	join schedule as s on g.id = s.id 
+	where (t.id = s.away and g.result = 2) 
+		or (t.id = s.home and g.result = 1)) as 'SOL', 
+		
+(select count(*) from game as g 
+	join schedule as s on g.id = s.id 
+	where ((t.id = s.away or t.id = s.home) and g.result = 5)) as 'TIE', 
+		
+((select count(*) from game as g 
+	join schedule as s on g.id = s.id 
+	where (t.id = s.home and g.home_score > g. away_score) 
+	or (t.id = s.away and g.home_score < g. away_score) 
+	or (t.id = s.home and g.result = 2) 
+	or (t.id = s.away and g.result = 1)
+	or (t.id = s.home and g.result = 4)
+	or (t.id = s.home and g.result = 3))*2) + 
+		(select count(*) from game as g 
+			join schedule as s on g.id = s.id 
+			where (t.id = s.away and g.result = 2) 
+				or (t.id = s.home and g.result = 1)
+				or ((t.id = s.away or t.id = s.home) and g.result = 5)) as 'Pts',
+(select sum(home_score) from game g
+	join schedule s on g.id = s.id
+	where t.id = s.home) +
+(select sum(away_score) from game g
+	join schedule s on g.id = s.id
+	where t.id = s.away) as 'GF',
+(select sum(away_score) from game g
+	join schedule s on g.id = s.id
+	where t.id = s.home) +
+(select sum(home_score) from game g
+	join schedule s on g.id = s.id
+	where t.id = s.away) as 'GA'
+from team as t 
+where season = 9
+order by 7 desc, 3 desc, 4 desc, 8 desc, 1
